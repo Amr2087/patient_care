@@ -13,6 +13,9 @@ from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_groq import ChatGroq
 from langchain_core.messages import AIMessage, HumanMessage
 
+st.set_page_config(layout='wide',
+                   page_title='Patient Care',
+                   )
 st.title('Patient Care')
 
 pinecone_api_key = "pcsk_5LPCzg_6A8fbo65hKuepW2rLi5kL4MyqftWzdVYGNVVfRKE6fCXyhUeAM6jSWW48886VWZ"
