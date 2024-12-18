@@ -13,7 +13,7 @@ from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_groq import ChatGroq
 from langchain_core.messages import AIMessage, HumanMessage
 
-st.title('Chat Bot App')
+st.title('Patient Care')
 
 pinecone_api_key = "pcsk_5LPCzg_6A8fbo65hKuepW2rLi5kL4MyqftWzdVYGNVVfRKE6fCXyhUeAM6jSWW48886VWZ"
 
@@ -51,7 +51,7 @@ prompt = ChatPromptTemplate.from_messages(
 question_answer_chain = create_stuff_documents_chain(llm, prompt)
 rag_chain = create_retrieval_chain(retriever, question_answer_chain)
 
-placeholder = "How can i help you?"
+placeholder = "كيف يمكن ان اساعدك؟"
 
 if "msgs" not in st.session_state:
     st.session_state.msgs = []
